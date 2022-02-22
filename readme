@@ -2,7 +2,7 @@
 █▀█ ▄█ █▄ █ █ ▀▀ █▀  █▄█ █ █  █ 
 ________________________________________________________________________
 
-So I needed myself am ascii looking font to generate logos for my repos
+So I needed myself an ascii looking font to generate logos for my repos
 
 And it got tedious doing the copy pasting by hand, so I threw together
 a small POSIX shell-script to help generate the texts for me
