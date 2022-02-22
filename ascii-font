@@ -1,0 +1,114 @@
+#!/bin/sh
+
+CHARACTERS="
+A1:▄▀█
+A2:█▀█
+
+B1:█▄▄
+B2:█▄█
+
+C1:█▀
+C2:█▄
+
+D1:█▀▄
+D2:█▄█
+
+E1:█▀█
+E2:█▄▄
+
+F1:█▀▀
+F2:█▀ 
+
+G1:█▀▀
+G2:█▄█
+
+H1:█ █
+H2:█▀█
+
+I1:▀
+I2:█
+
+J1:  █
+J2:█▄█
+
+K1:█▄▀
+K2:█ █
+
+L1:█ 
+L2:█▄
+
+M1:█▀▄▀█
+M2:█ ▀ █
+
+N1:█▀▄
+N2:█ █
+
+O1:█▀█
+O2:█▄█
+
+P1:█▀█
+P2:█▀▀
+
+Q1:█▀█
+Q2:█ ▄
+
+R1:█▀█
+R2:█  
+
+S1:█▀
+S2:▄█
+
+T1:▀█▀
+T2: █ 
+
+U1:█ █
+U2:█▄█
+
+V1:█ █
+V2:▀▄▀
+
+W1:█ █ █
+W2:█▄▀▄█
+
+X1:▀▄▀
+X2:█ █
+
+Y1:█ █
+Y2: █ 
+
+Z1:▀█
+Z2:█▄
+
+_1:  
+_2:▀▀
+"
+
+if [ -n "$1" ]; then
+	INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_')
+	LINE1=""
+	LINE2=""
+
+	while [ ${#INPUT} -gt 0 ]; do
+		NEXT=${INPUT#?}
+
+		for INDEX in 1 2; do
+			CHARACTER="${INPUT%$NEXT}${i}"
+			OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
+
+			if [ $INDEX == 1 ]; then
+				LINE1="${LINE1}${OUTPUT} "
+			fi
+
+			if [ $INDEX == 2 ]; then
+				LINE2="${LINE2}${OUTPUT} "
+			fi
+		done
+
+		INPUT=$NEXT
+	done
+
+cat <<EOF
+${LINE1}
+${LINE2}
+EOF
+fi
