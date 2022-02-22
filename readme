@@ -1,0 +1,55 @@
+▄▀█ █▀ █▀ ▀ ▀    █▀▀ █▀█ █▀▄ ▀█▀ 
+█▀█ ▄█ █▄ █ █ ▀▀ █▀  █▄█ █ █  █ 
+________________________________________________________________________
+
+So I needed myself am ascii looking font to generate logos for my repos
+
+And it got tedious doing the copy pasting by hand, so I threw together
+a small POSIX shell-script to help generate the texts for me
+
+Perhaps you might also find it useful?
+
+
+Demo
+________________________________________________________________________
+
+▄▀█ █▄▄ █▀ █▀▄ █▀█ █▀▀ █▀▀ █ █ ▀
+█▀█ █▄█ █▄ █▄█ █▄▄ █▀  █▄█ █▀█ █ 
+
+  █ █▄▀ █  █▀▄▀█ █▀▄ █▀█ █▀█ █▀█
+█▄█ █ █ █▄ █ ▀ █ █ █ █▄█ █▀▀ █ ▄  
+
+█▀█ █▀ ▀█▀ █ █ █ █ █ █ █ ▀▄▀ █ █ ▀█ 
+█   ▄█  █  █▄█ ▀▄▀ █▄▀▄█ █ █  █  █▄ ▀▀
+
+
+Install & Usage
+________________________________________________________________________
+
+git clone https://github.com/imlinus/ascii-font
+cd ascii-font/
+chmod +x ./ascii-font
+
+./ascii-font hello-world
+
+
+Contribute
+________________________________________________________________________
+
+If you have an idea on how to improve the font, then please fork the
+repository and add your pull request
+
+Q definitely needs some love for example
+Or perhaps some special symbols or numbers
+
+  ▄ █▀█ █  █▀█ ▀█ ▀█ █ █ █▀ █▀█
+▄ ▄   ▄ ▄  █▄█  █ █▄ ▀▀█ ▄█ ▀▀█
+
+
+Zero BSD License
+________________________________________________________________________
+
+Copyright by Linus <mail@imlinus.com>
+
+This work is licensed under the terms of the 0BSD license
+For a copy, see <https://imlinus.com/license>
