@@ -92,7 +92,7 @@ if [ -n "$1" ]; then
 		NEXT=${INPUT#?}
 
 		for INDEX in 1 2; do
-			CHARACTER="${INPUT%$NEXT}${i}"
+			CHARACTER="${INPUT%$NEXT}${INDEX}"
 			OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
 
 			if [ $INDEX == 1 ]; then
