@@ -1,14 +1,14 @@
-#!/bin/sh
-
+#!/usr/bin/env bash
+set -euo pipefail
 CHARACTERS="
-A1:▄▀█
+A1:█▀█
 A2:█▀█
 
 B1:█▄▄
 B2:█▄█
 
-C1:█▀
-C2:█▄
+C1:█▀▀
+C2:█▄▄
 
 D1:█▀▄
 D2:█▄█
@@ -40,23 +40,23 @@ L2:█▄
 M1:█▀▄▀█
 M2:█ ▀ █
 
-N1:█▀▄
-N2:█ █
+N1:█▀▀▄
+N2:█  █
 
-O1:█▀█
-O2:█▄█
+O1:█▀▀█
+O2:█▄▄█
 
 P1:█▀█
 P2:█▀▀
 
 Q1:█▀█
-Q2:█ ▄
+Q2:▀▀█▄
 
 R1:█▀█
 R2:█  
 
-S1:█▀
-S2:▄█
+S1:█▀▀
+S2:▄▄█
 
 T1:▀█▀
 T2: █ 
@@ -71,44 +71,43 @@ W1:█ █ █
 W2:█▄▀▄█
 
 X1:▀▄▀
-X2:█ █
+X2:▄▀▄
 
 Y1:█ █
 Y2: █ 
 
-Z1:▀█
-Z2:█▄
-
-_1:  
-_2:▀▀
+Z1:▀▀█
+Z2:█▄▄
 "
 
 if [ -n "$1" ]; then
-	INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_')
-	LINE1=""
-	LINE2=""
+    STRING=$(echo $1 | tr 'a-z' 'A-Z')
+    LINE1=""
+    LINE2=""
 
-	while [ ${#INPUT} -gt 0 ]; do
-		NEXT=${INPUT#?}
+    while [ ${#STRING} -gt 0 ]; do
+        NEXT=${STRING#?}
 
-		for INDEX in 1 2; do
-			CHARACTER="${INPUT%$NEXT}${INDEX}"
-			OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
+        for i in 1 2; do
+            CHAR="${STRING%$NEXT}${i}"
+            OUTPUT=$(echo "$CHARACTERS" | grep $CHAR | cut -d: -f2)
 
-			if [ $INDEX == 1 ]; then
-				LINE1="${LINE1}${OUTPUT} "
-			fi
+            if [ $i == 1 ]; then
+                LINE1="${LINE1}${OUTPUT} "
+            fi
 
-			if [ $INDEX == 2 ]; then
-				LINE2="${LINE2}${OUTPUT} "
-			fi
-		done
+            if [ $i == 2 ]; then
+                LINE2="${LINE2}${OUTPUT} "
+            fi
+        done
 
-		INPUT=$NEXT
-	done
+        STRING=$NEXT
+    done
 
 cat <<EOF
 ${LINE1}
 ${LINE2}
 EOF
 fi
+
+exit 0
