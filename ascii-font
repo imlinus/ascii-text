@@ -49,8 +49,8 @@ O2:█▄█
 P1:█▀█
 P2:█▀▀
 
-Q1:█▀█
-Q2:█ ▄
+Q1:█▀█ 
+Q2:█▄█▄
 
 R1:█▀█
 R2:█  
@@ -84,28 +84,28 @@ _2:▀▀
 "
 
 if [ -n "$1" ]; then
-	INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_')
-	LINE1=""
-	LINE2=""
+  INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_')
+  LINE1=""
+  LINE2=""
 
-	while [ ${#INPUT} -gt 0 ]; do
-		NEXT=${INPUT#?}
+  while [ ${#INPUT} -gt 0 ]; do
+    NEXT=${INPUT#?}
 
-		for INDEX in 1 2; do
-			CHARACTER="${INPUT%$NEXT}${INDEX}"
-			OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
+    for INDEX in 1 2; do
+      CHARACTER="${INPUT%$NEXT}${INDEX}"
+      OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
 
-			if [ $INDEX == 1 ]; then
-				LINE1="${LINE1}${OUTPUT} "
-			fi
+      if [ $INDEX == 1 ]; then
+        LINE1="${LINE1}${OUTPUT} "
+      fi
 
-			if [ $INDEX == 2 ]; then
-				LINE2="${LINE2}${OUTPUT} "
-			fi
-		done
+      if [ $INDEX == 2 ]; then
+        LINE2="${LINE2}${OUTPUT} "
+      fi
+    done
 
-		INPUT=$NEXT
-	done
+    INPUT=$NEXT
+  done
 
 cat <<EOF
 ${LINE1}
