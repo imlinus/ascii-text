@@ -17,7 +17,7 @@ ________________________________________________________________________
 █▀█ █▄█ █▄ █▄█ █▄▄ █▀  █▄█ █▀█ █ 
 
   █ █▄▀ █  █▀▄▀█ █▀▄ █▀█ █▀█ █▀█
-█▄█ █ █ █▄ █ ▀ █ █ █ █▄█ █▀▀ █ ▄  
+█▄█ █ █ █▄ █ ▀ █ █ █ █▄█ █▀▀ █▄█▄  
 
 █▀█ █▀ ▀█▀ █ █ █ █ █ █ █ ▀▄▀ █ █ ▀█ 
 █   ▄█  █  █▄█ ▀▄▀ █▄▀▄█ █ █  █  █▄ ▀▀
@@ -39,8 +39,7 @@ ________________________________________________________________________
 If you have an idea on how to improve the font, then please fork the
 repository and add your pull request
 
-Q definitely needs some love for example
-Or perhaps some special symbols or numbers
+Perhaps some special symbols or numbers
 
   ▄ █▀█ █  █▀█ ▀█ ▀█ █ █ █▀ █▀█
 ▄ ▄   ▄ ▄  █▄█  █ █▄ ▀▀█ ▄█ ▀▀█
@@ -49,7 +48,7 @@ Or perhaps some special symbols or numbers
 Zero BSD License
 ________________________________________________________________________
 
-Copyright by Linus <mail@imlinus.com>
+Copyright by Linus <mail@imlin.us>
 
 This work is licensed under the terms of the 0BSD license
-For a copy, see <https://imlinus.com/license>
+For a copy, please visit <https://imlin.us/license>
