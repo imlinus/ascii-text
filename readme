@@ -26,7 +26,7 @@ ________________________________________________________________________
 Quick test
 ________________________________________________________________________
 
-curl https://raw.githubusercontent.com/imlinus/ascii-font/main/ascii-font | bash -s hello-world
+curl -s https://raw.githubusercontent.com/imlinus/ascii-font/main/ascii-font | bash -s hello-world
 
 
 Install & Usage
