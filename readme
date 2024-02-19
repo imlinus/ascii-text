@@ -1,5 +1,5 @@
-▄▀█ █▀ █▀ ▀ ▀    █▀▀ █▀█ █▀▄ ▀█▀ 
-█▀█ ▄█ █▄ █ █ ▀▀ █▀  █▄█ █ █  █ 
+▄▀█ █▀ █▀ ▀ ▀   ▀█▀ █▀█ ▀▄▀ ▀█▀ 
+█▀█ ▄█ █▄ █ █    █  █▄▄ █ █  █  
 ________________________________________________________________________
 
 So I needed myself an ascii looking font to generate logos for my repos
@@ -19,24 +19,26 @@ ________________________________________________________________________
   █ █▄▀ █  █▀▄▀█ █▀▄ █▀█ █▀█ █▀█
 █▄█ █ █ █▄ █ ▀ █ █ █ █▄█ █▀▀ █▄█▄  
 
-█▀█ █▀ ▀█▀ █ █ █ █ █ █ █ ▀▄▀ █ █ ▀█ 
-█   ▄█  █  █▄█ ▀▄▀ █▄▀▄█ █ █  █  █▄ ▀▀
+█▀█ █▀ ▀█▀ █ █ █ █ █ █ █ ▀▄▀ █ █ ▀█
+█   ▄█  █  █▄█ ▀▄▀ █▄▀▄█ █ █  █  █▄
+     █▀█ █
+▄ ▀▀   ▄ ▄
 
 
 Quick test
 ________________________________________________________________________
 
-curl -s https://raw.githubusercontent.com/imlinus/ascii-font/main/ascii-font | bash -s hello-world
+curl -s https://raw.githubusercontent.com/imlinus/ascii-text/main/ascii-text | bash -s 'hello world'
 
 
 Install & Usage
 ________________________________________________________________________
 
-git clone https://github.com/imlinus/ascii-font
-cd ascii-font/
-chmod +x ./ascii-font
+git clone https://github.com/imlinus/ascii-text
+cd ascii-text/
+chmod +x ./ascii-text
 
-./ascii-font hello-world
+./ascii-text 'hello world'
 
 
 Contribute
@@ -47,8 +49,8 @@ repository and add your pull request
 
 Perhaps some special symbols or numbers
 
-  ▄ █▀█ █  █▀█ ▀█ ▀█ █ █ █▀ █▀█
-▄ ▄   ▄ ▄  █▄█  █ █▄ ▀▀█ ▄█ ▀▀█
+█▀█ ▀█ ▀█ █ █ █▀ █▄▄ ▀▀█ █▀█
+█▄█  █ █▄ ▀▀█ ▄█ █▄█  █  ▀▀█
 
 
 Zero BSD License
