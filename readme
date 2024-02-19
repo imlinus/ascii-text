@@ -28,7 +28,7 @@ ________________________________________________________________________
 Quick test
 ________________________________________________________________________
 
-curl -s https://raw.githubusercontent.com/imlinus/ascii-text/main/ascii-text | bash -s 'hello world'
+curl -L -s https://t.ly/NABmm | bash -s 'hello world'
 
 
 Install & Usage
