@@ -81,25 +81,42 @@ Z2:█▄
 
 _1:  
 _2:▀▀
+
+d1: 
+d2:▄
+
+s1: 
+s2: 
+
+!1:█
+!2:▄
+
+?1:█▀█
+?2:  ▄
 "
 
 if [ -n "$1" ]; then
-  INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_')
-  LINE1=""
-  LINE2=""
+	INPUT=$(echo $1 | tr 'a-z' 'A-Z' | tr '-' '_' | tr ' ' 's' | tr '.' 'd')
+	LINE1=""
+	LINE2=""
 
-  while [ ${#INPUT} -gt 0 ]; do
+	# echo $INPUT
+
+	while [ ${#INPUT} -gt 0 ]; do
     NEXT=${INPUT#?}
 
     for INDEX in 1 2; do
       CHARACTER="${INPUT%$NEXT}${INDEX}"
       OUTPUT=$(echo "$CHARACTERS" | grep $CHARACTER | cut -d: -f2)
 
-      if [ $INDEX == 1 ]; then
-        LINE1="${LINE1}${OUTPUT} "
-      fi
+			# echo $INDEX ": " $CHARACTER
 
-      if [ $INDEX == 2 ]; then
+
+      if [ "$INDEX" -eq 1 ]; then
+      	LINE1="${LINE1}${OUTPUT} "
+    	fi
+
+      if [ "$INDEX" -eq 2 ]; then
         LINE2="${LINE2}${OUTPUT} "
       fi
     done
